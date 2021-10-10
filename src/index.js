@@ -4,11 +4,17 @@ import ReactDOM from "react-dom";
 import "./index.css";
 
 //import components
-import Counter from "./Components/Counter/Counter"
+import Counter from "./Components/Counter/Counter";
+
+//import store
+import store from "./store";
+import { Provider } from "react-redux";
 
 const App = () => {
   return(
-    <Counter/>
+    <Provider store={store}>
+      <Counter/>
+    </Provider>
   )
 }
 
